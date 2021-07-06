@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		003DB23D2694B49B00315FF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DB23C2694B49B00315FF8 /* AppDelegate.swift */; };
-		003DB23F2694B49B00315FF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DB23E2694B49B00315FF8 /* SceneDelegate.swift */; };
-		003DB2412694B49B00315FF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DB2402694B49B00315FF8 /* ViewController.swift */; };
 		003DB2442694B49B00315FF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003DB2422694B49B00315FF8 /* Main.storyboard */; };
 		003DB2462694B49C00315FF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003DB2452694B49C00315FF8 /* Assets.xcassets */; };
 		003DB2492694B49C00315FF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003DB2472694B49C00315FF8 /* LaunchScreen.storyboard */; };
+		003DB2572694B5F300315FF8 /* BLEClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DB2552694B5F300315FF8 /* BLEClient.swift */; };
+		003DB2582694B5F300315FF8 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DB2562694B5F300315FF8 /* ClientViewController.swift */; };
+		003DB25A2694B60800315FF8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DB2592694B60800315FF8 /* Constants.swift */; };
+		003DB25E2694C1E700315FF8 /* BLEServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DB25B2694C1E700315FF8 /* BLEServer.swift */; };
+		003DB25F2694C1E700315FF8 /* ServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DB25C2694C1E700315FF8 /* ServerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		003DB2392694B49B00315FF8 /* BLEExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		003DB23C2694B49B00315FF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		003DB23E2694B49B00315FF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		003DB2402694B49B00315FF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		003DB2432694B49B00315FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		003DB2452694B49C00315FF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		003DB2482694B49C00315FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		003DB24A2694B49C00315FF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		003DB2552694B5F300315FF8 /* BLEClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEClient.swift; sourceTree = "<group>"; };
+		003DB2562694B5F300315FF8 /* ClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
+		003DB2592694B60800315FF8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		003DB25B2694C1E700315FF8 /* BLEServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEServer.swift; sourceTree = "<group>"; };
+		003DB25C2694C1E700315FF8 /* ServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		003DB23B2694B49B00315FF8 /* BLEExample */ = {
 			isa = PBXGroup;
 			children = (
-				003DB23C2694B49B00315FF8 /* AppDelegate.swift */,
-				003DB23E2694B49B00315FF8 /* SceneDelegate.swift */,
-				003DB2402694B49B00315FF8 /* ViewController.swift */,
-				003DB2422694B49B00315FF8 /* Main.storyboard */,
-				003DB2452694B49C00315FF8 /* Assets.xcassets */,
-				003DB2472694B49C00315FF8 /* LaunchScreen.storyboard */,
+				003DB2512694B58F00315FF8 /* Resources */,
+				003DB2502694B58800315FF8 /* Support */,
+				003DB2522694B5A400315FF8 /* Internal */,
 				003DB24A2694B49C00315FF8 /* Info.plist */,
 			);
 			path = BLEExample;
+			sourceTree = "<group>";
+		};
+		003DB2502694B58800315FF8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				003DB23C2694B49B00315FF8 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		003DB2512694B58F00315FF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				003DB2422694B49B00315FF8 /* Main.storyboard */,
+				003DB2452694B49C00315FF8 /* Assets.xcassets */,
+				003DB2472694B49C00315FF8 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		003DB2522694B5A400315FF8 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				003DB2592694B60800315FF8 /* Constants.swift */,
+				003DB2542694B5B500315FF8 /* Server */,
+				003DB2532694B5B000315FF8 /* Client */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		003DB2532694B5B000315FF8 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				003DB2552694B5F300315FF8 /* BLEClient.swift */,
+				003DB2562694B5F300315FF8 /* ClientViewController.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		003DB2542694B5B500315FF8 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				003DB25B2694C1E700315FF8 /* BLEServer.swift */,
+				003DB25C2694C1E700315FF8 /* ServerViewController.swift */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				003DB2412694B49B00315FF8 /* ViewController.swift in Sources */,
+				003DB25F2694C1E700315FF8 /* ServerViewController.swift in Sources */,
+				003DB2582694B5F300315FF8 /* ClientViewController.swift in Sources */,
+				003DB25E2694C1E700315FF8 /* BLEServer.swift in Sources */,
+				003DB2572694B5F300315FF8 /* BLEClient.swift in Sources */,
 				003DB23D2694B49B00315FF8 /* AppDelegate.swift in Sources */,
-				003DB23F2694B49B00315FF8 /* SceneDelegate.swift in Sources */,
+				003DB25A2694B60800315FF8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y42575E352;
 				INFOPLIST_FILE = BLEExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y42575E352;
 				INFOPLIST_FILE = BLEExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
